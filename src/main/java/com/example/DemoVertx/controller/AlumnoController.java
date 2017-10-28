@@ -17,11 +17,10 @@ import io.vertx.ext.web.RoutingContext;
 
 
 public class AlumnoController {
-
-	private AlumnoDAO alumnoDao=AlumnoDAO.getInstance();
 	
-	@Autowired
-	private Vertx vertx;
+	private AlumnoDAO alumnoDao=AlumnoDAO.getInstance();
+
+	
 	/*
 	public AlumnoController(Vertx vertx){
 		 this.vertx=vertx;
@@ -29,7 +28,7 @@ public class AlumnoController {
 	 
 		public void holaMundo(Router router){
 		    router.get(Api.HOLA).handler(routingContext->{HttpServerResponse response=routingContext.response();
-			response.putHeader("content-type", "text/plain");
+			response.putHeader("content-type", "text/plain charset=UTF-8");
 			response.end("Hola mundo desde vert.x");});
 		}
 		
@@ -40,7 +39,7 @@ public class AlumnoController {
 		
 		private void findAllctx(RoutingContext routingContext){
 			HttpServerResponse response = routingContext.response();
-			response.putHeader("content-type", "application/json");
+			response.putHeader("content-type", "application/json; charset=UTF-8");
 			response.end(Json.encodePrettily(alumnoDao.findAll()));
 		}
 	    

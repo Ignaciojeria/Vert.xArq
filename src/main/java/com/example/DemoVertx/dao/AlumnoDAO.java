@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.stereotype.Repository;
+
 import com.example.DemoVertx.domain.Alumno;
 
-
+@Repository
 public class AlumnoDAO {
 
 	private static final AlumnoDAO alumnoRepository = new AlumnoDAO();
