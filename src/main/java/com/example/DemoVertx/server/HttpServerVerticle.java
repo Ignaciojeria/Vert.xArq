@@ -18,7 +18,7 @@ import io.vertx.ext.web.handler.BodyHandler;
 import io.vertx.ext.web.handler.CorsHandler;
 
 @Component
-public class ServerVerticle extends AbstractVerticle {
+public class HttpServerVerticle extends AbstractVerticle {
 
 		@Override
 	    public void start(Future<Void> future) throws Exception{
@@ -26,7 +26,7 @@ public class ServerVerticle extends AbstractVerticle {
 	//        HelloWorld service = new HelloWorld();
 	//        HelloController controller = new HelloController(vertx, service);
 	//        Router helloRouter = controller.getRouter();
-	        AlumnoController alumnoController=new AlumnoController(vertx);
+	        AlumnoController alumnoController=new AlumnoController();
 	       // Router alumnoRouter = alumnoController.getRouter();
 	        Router mainRouter = Router.router(vertx);
 	       // mainRouter.route().consumes("application/json");

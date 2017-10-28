@@ -19,12 +19,13 @@ import io.vertx.ext.web.RoutingContext;
 public class AlumnoController {
 
 	private AlumnoDAO alumnoDao=AlumnoDAO.getInstance();
-
-	private Vertx vertx;
 	
+	@Autowired
+	private Vertx vertx;
+	/*
 	public AlumnoController(Vertx vertx){
 		 this.vertx=vertx;
-	 }
+	 }*/
 	 
 		public void holaMundo(Router router){
 		    router.get(Api.HOLA).handler(routingContext->{HttpServerResponse response=routingContext.response();

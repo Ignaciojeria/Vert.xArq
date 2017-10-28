@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import com.example.DemoVertx.server.ServerLauncher;
-import com.example.DemoVertx.server.ServerVerticle;
+import com.example.DemoVertx.server.HttpServerVerticle;
 
 import io.vertx.core.AbstractVerticle;
 

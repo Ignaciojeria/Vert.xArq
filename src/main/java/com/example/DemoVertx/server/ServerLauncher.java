@@ -14,7 +14,8 @@ public class ServerLauncher extends AbstractVerticle {
         int WORKER_POOL_SIZE = 100;
 
         DeploymentOptions opts = new DeploymentOptions().setWorkerPoolSize(WORKER_POOL_SIZE);
-        String verticle = ServerVerticle.class.getName();
+        opts.setInstances(Runtime.getRuntime().availableProcessors()*2);
+        String verticle = HttpServerVerticle.class.getName();
         vertx.deployVerticle(verticle, opts, res -> {
             if(res.failed()){
                 System.out.println("Failed to deploy verticle");
